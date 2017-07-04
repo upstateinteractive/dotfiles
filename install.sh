@@ -9,7 +9,7 @@ function symlink {
 for filename in *; do
   # not this script
   if [[ "$filename" != "install.sh" ]] &&
-     [[ "$filename" != "LICENCE" ]] &&
+     [[ "$filename" != "LICENSE" ]] &&
      [[ "$filename" != "README.md" ]] &&
      [[ "$filename" != "."* ]]; then
 
