@@ -1,0 +1,47 @@
+[init]
+	templatedir = ~/.git_template
+[push]
+  default = simple
+[color]
+  ui = auto
+  interactive = auto
+[alias]
+  s = status
+  a = !git add . && git status
+  au = !git add -u . && git status
+  aa = !git add . && git add -u . && git status
+  c = commit
+  cm = commit -m
+  ac = !git add . && git commit
+  acm = !git add . && git commit -m
+  l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  ll =  log --stat --abbrev-commit
+  d = diff --color-words
+  dh = diff --color-words head
+  br = branch
+  co = checkout
+  master = checkout master
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  g = grep --break --heading --line-number
+  tidy = "!git branch --merged | grep -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+  prune = remote prune origin
+[core]
+  quotepath = false
+  excludesfile = ~/.gitignore
+  editor = vim
+  pager = less -r
+[commit]
+  template = ~/.gitmessage
+[include]
+  path = ~/.gitconfig.local
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[grep]
+  extendRegexp = true
+  lineNumber = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
