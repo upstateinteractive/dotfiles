@@ -1,0 +1,58 @@
+set nocompatible   " be iMproved
+filetype off       " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" Javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+" Show Git Diffs in Gutter
+Bundle 'airblade/vim-gitgutter'
+
+" Autoclose { ( " '
+Bundle 'jiangmiao/auto-pairs'
+
+" use <tab> to open the ctrl-n autocomplete menu
+Bundle 'ervandew/supertab'
+
+" comment plugin
+Bundle 'tpope/vim-commentary'
+
+" Color Scheme
+Bundle 'altercation/vim-colors-solarized'
+
+" Ag for faster searching
+Bundle 'rking/ag.vim'
+
+" Git commands in vim such as :Gstatus to view repository status
+Bundle 'tpope/vim-fugitive'
+
+" Useful for editing surround tags like in html or () or {}
+Bundle 'tpope/vim-surround'
+
+" Useful to someone not me shortcuts
+Bundle 'tpope/vim-unimpaired'
+
+" enable :tComment to toggle comments
+Bundle 'vim-scripts/tComment'
+
+" Vim Markdown
+Bundle 'gabrielelana/vim-markdown'
+
+" Vim Syntastic
+Bundle 'vim-syntastic/syntastic'
+
+" close html tags for me
+Bundle 'alvan/vim-closetag'
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.jsx,*.js"
+
+" Writing
+Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'herrbischoff/cobalt2.vim'
+filetype on
